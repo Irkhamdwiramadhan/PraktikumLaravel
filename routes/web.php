@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\KelurahanController;
+use App\Http\Controllers\PasienController;
+use App\Http\Controllers\DokterController;
+
 
 
 Route::get('/', function () {
@@ -28,3 +32,7 @@ Route::get('/dahsboard', [adminController::class, 'index']);
 Route::get('/contact', [contactController::class, 'index']);
 Route::get('/About', [AboutController::class, 'index']);
 
+//praktikum laravel 3
+Route::get('/kelurahan', [KelurahanController::class, 'index'])->name('kelurahan.index');
+Route::get('/pasien', [PasienController::class, 'index'])->name('pasien.index');
+Route::get('/dokter', [DokterController::class, 'index'])->name('dokter.index');
